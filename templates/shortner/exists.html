@@ -1,0 +1,18 @@
+{% extends "shortner/base.html" %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+{% block content %}
+<div>
+    <h1>Exists!</h1>
+    <h2>{{ object.url }}</h2>
+    <p>The shortcode already exists:</p>&nbsp;<a class="btn btn-link" href="{{ object.get_short_url }}"><b>{{ object.get_short_url }}</b></a><br>
+    <a class="btn btn-success" href="/" >Shorten another</a>
+</div>
+{% endblock content%}
+</body>
+</html>

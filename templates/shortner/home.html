@@ -1,0 +1,25 @@
+{% extends 'shortner/base.html' %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+
+</head>
+<body >
+{% block content %}
+    <h1 class="cover-heading">{{ title }}</h1>
+    <p class="">Shortern that URL</p>
+    <p class="lead">
+        <div class="col-sm-4 col-sm-offset-4">
+            <form method="post" action=".">{% csrf_token %}
+                <!-- <input name="url" type="text" placeholder="Shorten url"> -->
+                {{ form.as_p }}
+                <input class="btn btn-primary" type="submit" value="Shorten ->">
+            </form>
+        </div>
+    </p>
+{% endblock %}
+
+</body>
+</html>
